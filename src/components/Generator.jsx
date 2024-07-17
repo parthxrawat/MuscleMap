@@ -56,10 +56,10 @@ export default function Generator(props) {
             <div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
                 {Object.keys(WORKOUTS).map((type, typeIndex) => {
                     return (
-                        <button onClick={() => {
+                        <button  onClick={() => {
                             setMuscles([])
                             setPoison(type)
-                        }} className={'bg-purple-900 border  duration-200 px-4 hover:border-purple-600 py-3 rounded-lg ' + (type === poison ? ' border-white-1000' : ' border-purple-600')} key={typeIndex}>
+                        }} className={'bg-purple-900 border blueShadow  duration-200 px-4 hover:border-purple-600 py-3 rounded-lg ' + (type === poison ? ' border-white-1000' : ' border-purple-600')} key={typeIndex}>
                             <p className='capitalize'>{type.replaceAll('_', " ")}</p>
                         </button>
                     )
@@ -78,7 +78,7 @@ export default function Generator(props) {
                             return (
                                 <button onClick={() => {
                                     updateMuscles(muscleGroup)
-                                }} key={muscleGroupIndex} className={'hover:text-purple-400 duration-200 ' + (muscles.includes(muscleGroup) ? ' text-purple-400' : ' ')}>
+                                }} key={muscleGroupIndex} className={'hover:text-purple-400 blueShadow duration-200 ' + (muscles.includes(muscleGroup) ? ' text-purple-400' : ' ')}>
                                     <p className='uppercase'>{muscleGroup.replaceAll('_', ' ')}</p>
                                 </button>
                             )
@@ -92,7 +92,7 @@ export default function Generator(props) {
                     return (
                         <button onClick={() => {
                             setGoal(scheme)
-                        }} className={'bg-purple-900 border  duration-200 hover:border-purple-600 py-3 rounded-lg px-4 ' + (scheme === goal ? '  border-white-1000' : ' border-purple-600')} key={schemeIndex}>
+                        }} className={'bg-purple-900 border blueShadow  duration-200 hover:border-purple-600 py-3 rounded-lg px-4 ' + (scheme === goal ? '  border-white-1000' : ' border-purple-600')} key={schemeIndex}>
                             <p className='capitalize'>{scheme.replaceAll('_', " ")}</p>
                         </button>
                     )
