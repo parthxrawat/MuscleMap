@@ -43,7 +43,7 @@ export default function ExerciseCard(props) {
                         </div>
                     )
                 })}
-                <button onClick={handleSetIncrement} className='flex flex-col p-2 rounded border-[1.5px] duration-200 border-solid border-purple-600 hover:border-blue-600 w-full duration-200'>
+                <button onClick={handleSetIncrement} className='flex flex-col p-2 rounded border-[1.5px] duration-200 border-solid border-purple-600 hover:border-purple-600 w-full duration-200'>
                     <h3 className='text-purple-400 text-sm capitalize'>Sets completed</h3>
                     <p className='font-medium'>{setsCompleted} / 5</p>
                 </button>
