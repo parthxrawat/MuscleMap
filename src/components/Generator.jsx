@@ -8,7 +8,7 @@ function Header(props) {
     return (
         <div className='flex flex-col gap-4'>
             <div className='flex items-center justify-center gap-2'>
-                <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-purple-400'>{index}</p>
+                <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-blue-400'>{index}</p>
                 <h4 className='text-xl sm:text-2xl md:text-3xl'>{title}</h4>
             </div>
             <p className='text-sm sm:text-base mx-auto'>{description}</p>
@@ -50,7 +50,7 @@ export default function Generator(props) {
     }
 
     return (
-        <div className='min-h-screen  items-center justify-center bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900'>
+        <div className='min-h-screen  items-center justify-center bg-gradient-to-br from-blue-900 via-black to-blue-950'>
         <SectionWrapper id={'generate'} header={"generate your workout"} title={['It\'s', 'Huge', 'o\'clock']}>
             <Header index={'01'} title={'Pick your poison'} description={"Select the workout you wish to endure."} />
             <div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
@@ -59,14 +59,14 @@ export default function Generator(props) {
                         <button  onClick={() => {
                             setMuscles([])
                             setPoison(type)
-                        }} className={'bg-purple-900 border  py-3 rounded-lg ' + (type === poison ? ' border-white-1000' : ' blueShadow  duration-200 px-4 hover:border-purple-600 border-purple-600')} key={typeIndex}>
+                        }} className={'bg-blue-900 border  py-3 rounded-lg ' + (type === poison ? ' border-white-1000' : ' blueShadow  duration-200 px-4 hover:border-blue-600 border-blue-600')} key={typeIndex}>
                             <p className='capitalize'>{type.replaceAll('_', " ")}</p>
                         </button>
                     )
                 })}
             </div>
             <Header  index={'02'} title={'Lock on targets'} description={"Select the muscles judged for annihilation."} />
-            <div className='bg-purple-900  border border-solid border-purple-600 rounded-lg flex flex-col'>
+            <div className='bg-blue-900  border border-solid border-blue-600 rounded-lg flex flex-col'>
                 <button onClick={toggleModal} className='relative p-3 flex items-center justify-center'>
                     <p className='capitalize'>{muscles.length == 0 ? 'Select muscle groups' : muscles.join(' ')}</p>
                     <i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
@@ -78,7 +78,7 @@ export default function Generator(props) {
                             return (
                                 <button onClick={() => {
                                     updateMuscles(muscleGroup)
-                                }} key={muscleGroupIndex} className={'hover:text-purple-400 blueShadow duration-200 ' + (muscles.includes(muscleGroup) ? ' text-purple-400' : ' ')}>
+                                }} key={muscleGroupIndex} className={'hover:text-blue-400 blueShadow duration-200 ' + (muscles.includes(muscleGroup) ? ' text-blue-400' : ' ')}>
                                     <p className='uppercase'>{muscleGroup.replaceAll('_', ' ')}</p>
                                 </button>
                             )
@@ -92,7 +92,7 @@ export default function Generator(props) {
                     return (
                         <button onClick={() => {
                             setGoal(scheme)
-                        }} className={'bg-purple-900 border duration-200 py-3 rounded-lg px-4 ' + (scheme === goal ? '  border-white-1000' : ' blueShadow hover:border-purple-600 border-purple-600')} key={schemeIndex}>
+                        }} className={'bg-blue-900 border duration-200 py-3 rounded-lg px-4 ' + (scheme === goal ? '  border-white-1000' : ' blueShadow hover:border-blue-600 border-blue-600')} key={schemeIndex}>
                             <p className='capitalize'>{scheme.replaceAll('_', " ")}</p>
                         </button>
                     )

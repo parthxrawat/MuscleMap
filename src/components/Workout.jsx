@@ -5,7 +5,7 @@ import ExerciseCard from './ExerciseCard'
 export default function Workout(props) {
     const { workout } = props
     return (
-        <div className='min-h-screen  items-center justify-center bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900'>
+        <div className='min-h-screen  items-center justify-center bg-gradient-to-br from-blue-900 via-black to-blue-950'>
         <SectionWrapper id={'workout'} header={"welcome to"} title={['THE', 'DANGER', 'ZONE']}>
             <div className='flex flex-col gap-4'>
                 {workout.map((exercise, i) => {
